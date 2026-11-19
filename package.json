@@ -1,0 +1,16 @@
+{
+  "name": "resume-insight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-stack resume analyzer with ATS insights and optional AI feedback.",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
